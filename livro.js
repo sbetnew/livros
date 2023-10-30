@@ -29,10 +29,10 @@ class Livro {
   }
 
   calculaTotal() {
-    if (this.desconto.length === 0) {
+    if (this.desconto == null) {
       throw new Error('Valor de desconto não informado');
     }
-    if (this.valor.length === 0) {
+    if (this.valor == null) {
       throw new Error('Valor do produto não informado');
     }
     this.total = this.valor - (this.valor * this.desconto) / 100;
